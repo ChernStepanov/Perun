@@ -44,7 +44,7 @@ def weekly(p: pd.DataFrame, rel: pd.DataFrame):
     ax.plot([], [], color=OPEN, lw=1, label="релиз открытой модели")
     ax.plot([], [], color=CLOSED, lw=1, label="релиз закрытой модели")
     ax.fill_between([], [], color=GREY, alpha=0.3, label="контрольные события")
-    ax.set_ylabel("жертв на лик-сайтах")
+    ax.set_ylabel("жертв за неделю")
     ax.legend(loc="upper left", frameon=False, ncol=3, fontsize=8)
     ax.xaxis.set_major_locator(mdates.YearLocator())
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
