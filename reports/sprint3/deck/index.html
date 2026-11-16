@@ -7,102 +7,118 @@
 <style>
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: "Golos Text", sans-serif; color: #111; font-size: 8.6pt; line-height: 1.32; }
-.page { width: 210mm; height: 297mm; background: #f6f5f1; position: relative; overflow: hidden; }
-.head { height: 13mm; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 12mm;
-        border-bottom: 0.4mm solid #111; }
-.tag { font-weight: 700; font-size: 6.2pt; letter-spacing: .14em; text-transform: uppercase; }
-.date { font-size: 12pt; }
-.num { justify-self: end; font-weight: 700; font-size: 6.5pt; }
-.hero { display: grid; grid-template-columns: 1fr 62mm; border-bottom: 0.4mm solid #111; }
-.hero .t { padding: 6mm 12mm 5mm; }
-.hero .eyes { background: #000 url(img/eye_one.jpg) center/contain no-repeat; border-left: 0.4mm solid #111; }
-h1, h2 { font-family: "Oswald", sans-serif; font-weight: 700; text-transform: uppercase; line-height: .92; }
-h1 { font-size: 29pt; }
-.hero p { margin-top: 2.5mm; font-size: 9.5pt; }
-.body { padding: 5mm 12mm 0; }
-h2 { font-size: 15pt; margin: 4.5mm 0 2mm; }
-h2:first-child { margin-top: 0; }
-table { width: 100%; border-collapse: collapse; font-size: 7.9pt; line-height: 1.25; }
-th { text-align: left; font-size: 6pt; letter-spacing: .1em; text-transform: uppercase; padding: 0 2mm 1.2mm 0;
-     border-bottom: 0.35mm solid #111; }
-td { padding: 1.3mm 2mm 1.3mm 0; border-bottom: 0.2mm solid #bdbbb4; vertical-align: top; }
-td:first-child { font-weight: 700; white-space: nowrap; }
-.y, .n, .p { font-weight: 700; font-size: 6pt; letter-spacing: .06em; text-transform: uppercase;
-             padding: .3mm 1.2mm; border: 0.25mm solid #111; white-space: nowrap; }
-.y { background: #111; color: #f6f5f1; }
-.n { color: #777; border-color: #777; }
+:root { --x: 14mm; --label: 42mm; --gap: 6mm; --ink: #111; --mute: #707070; --hair: #c4c2bb; }
+body { font-family: "Golos Text", sans-serif; color: var(--ink); font-size: 9pt; line-height: 1.4; }
+.page { width: 210mm; height: 297mm; background: #f6f5f1; position: relative; overflow: hidden;
+        display: flex; flex-direction: column; }
+
+.head { flex: none; height: 14mm; padding: 0 var(--x); display: grid; grid-template-columns: 1fr auto 1fr;
+        align-items: center; border-bottom: 0.4mm solid var(--ink); }
+.cap { font-weight: 700; font-size: 6.3pt; letter-spacing: .14em; text-transform: uppercase; }
+.head .date { font-size: 12pt; }
+.head .cap:last-child { justify-self: end; }
+
+.row { display: grid; grid-template-columns: var(--label) 1fr; column-gap: var(--gap);
+       padding: 4.5mm var(--x); border-bottom: 0.25mm solid var(--ink); }
+h1, h2 { font-family: "Oswald", sans-serif; font-weight: 700; text-transform: uppercase; line-height: .95; }
+h1 { font-size: 40pt; }
+h2 { font-size: 13pt; padding-top: .4mm; }
+
+.title { padding-top: 6mm; padding-bottom: 5mm; row-gap: 2mm; }
+.title h1 { grid-column: 1 / -1; }
+.title .sub { grid-column: 2; }
+.title .sub { font-size: 10.5pt; line-height: 1.35; }
+.title .sub span { display: block; color: var(--mute); font-size: 8.5pt; margin-top: 1.5mm; }
+
+.list > div { display: grid; grid-template-columns: 34mm 1fr 16mm; column-gap: 4mm; padding: 1.1mm 0;
+              border-top: 0.2mm solid var(--hair); }
+.list > div:first-child { border-top: 0; padding-top: 0; }
+.list b { font-weight: 700; }
+.list .r { text-align: right; font-weight: 700; font-size: 6.3pt; letter-spacing: .1em; text-transform: uppercase; padding-top: .5mm; }
+.list .r.no { color: var(--mute); }
+.list.two > div { grid-template-columns: 34mm 1fr; }
+
+.pair { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gap); }
+.pair .cap { display: block; margin-bottom: 1.5mm; }
 ul { list-style: none; }
-li { position: relative; padding-left: 4.5mm; margin-bottom: 1.2mm; }
-li::before { content: ">"; position: absolute; left: 0; }
-.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
-.roles td:first-child { width: 40mm; }
-.roles td span { display: block; font-weight: 400; font-size: 6.8pt; color: #6b6b6b; }
-.mvp { display: flex; gap: 4mm; align-items: center; background: #000; color: #f4f3ee; padding: 3mm 5mm;
-       margin-top: 4mm; }
-.mvp b { font-family: "Oswald"; font-size: 24pt; line-height: 1; white-space: nowrap; }
-.strip { position: absolute; left: 0; right: 0; bottom: 0; height: 9mm; background: #000 url(img/strip.jpg) center/cover; }
+li { padding-left: 4mm; text-indent: -4mm; margin-bottom: .9mm; }
+li::before { content: "> "; }
+
+.mvp { flex: 1; background: #000; color: #f4f3ee; border-bottom: 0; align-content: start;
+       background: #000 url(img/eye_one.jpg) right var(--x) bottom 8mm / 40mm no-repeat; }
+.mvp h2 { font-size: 26pt; }
+.mvp { min-height: 34mm; }
+.mvp p { max-width: 96mm; font-size: 9.5pt; }
+.strip { flex: none; height: 9mm; background: #000 url(img/strip.jpg) center/cover; border-top: 0.25mm solid #333; }
 </style>
 </head>
 <body>
 <section class="page">
-  <div class="head"><span class="tag">Спринт 3 · 09.11 — 22.11</span><span class="date">20.11.26</span><span class="num">Чернов · Левковская · Сергеев</span></div>
-  <div class="hero">
-    <div class="t">
-      <h1>Аналоги, киллер-фичи<br>и ревью спринта</h1>
-      <p>Влияние релизов LLM на динамику кибератак · github.com/ChernStepanov/Perun</p>
-    </div>
-    <div class="eyes"></div>
+  <div class="head"><span class="cap">Спринт 3 · 09.11 — 22.11</span><span class="date">20.11.26</span><span class="cap">Око Перуна</span></div>
+
+  <div class="row title">
+    <h1>Спринт 3</h1>
+    <div class="sub">Аналоги, киллер-фичи и ревью работы
+      <span>Влияние релизов LLM на динамику кибератак · github.com/ChernStepanov/Perun</span></div>
   </div>
-  <div class="body">
-    <h2>Аналоги и их киллер-фичи</h2>
-    <table>
-      <thead><tr><th>Аналог</th><th>Киллер-фича</th><th>Берём?</th><th>Решение</th></tr></thead>
-      <tbody>
-        <tr><td>ransomware.live</td><td>Сбор с сотен лик-сайтов, дата атаки отдельно от даты поста</td><td><span class="y">Да</span></td><td>Основной источник. По паре дат отличаем атаку от публикации</td></tr>
-        <tr><td>ransomwatch</td><td>Независимый краулер, открытый дамп</td><td><span class="y">Да</span></td><td>Проверка основного источника (месячная корреляция 0,60)</td></tr>
-        <tr><td>CISA KEV</td><td>Подтверждённая эксплуатация, флаг «шифровальщики»</td><td><span class="y">Да</span></td><td>Технический ряд для H4, дни до эксплуатации</td></tr>
-        <tr><td>Epoch AI</td><td>Даты релизов и доступ к весам</td><td><span class="y">Да</span></td><td>Сверка календаря, деление на открытые и закрытые модели</td></tr>
-        <tr><td>AI Incident DB</td><td>У каждой записи есть источник</td><td><span class="p">Частично</span></td><td>Ссылка у каждого из 76 событий</td></tr>
-        <tr><td>Hackmageddon</td><td>Ручная разметка мотива и техники</td><td><span class="n">Нет</span></td><td>Только помесячно, не масштабируется, скриптам отдаёт 403</td></tr>
-        <tr><td>Отчёты вендоров ИБ</td><td>Большая телеметрия, разрез по России</td><td><span class="n">Нет</span></td><td>Только квартальные данные, методики несопоставимы</td></tr>
-        <tr><td>Отчёты OpenAI, Google, Anthropic</td><td>Телеметрия злоупотреблений моделями</td><td><span class="n">Нет</span></td><td>Данные закрыты, сами отчёты учитываем как события</td></tr>
-      </tbody>
-    </table>
 
-    <div class="cols">
-      <div>
-        <h2>Наши преимущества</h2>
+  <div class="row">
+    <h2>Аналоги</h2>
+    <div class="list">
+      <div><b>ransomware.live</b><span>Дата атаки отдельно от даты поста</span><span class="r">Берём</span></div>
+      <div><b>ransomwatch</b><span>Второй краулер для сверки источника</span><span class="r">Берём</span></div>
+      <div><b>CISA KEV</b><span>Эксплуатация и флаг «шифровальщики»</span><span class="r">Берём</span></div>
+      <div><b>Epoch AI</b><span>Даты релизов и доступ к весам</span><span class="r">Берём</span></div>
+      <div><b>AI Incident DB</b><span>Источник у каждой записи</span><span class="r">Берём</span></div>
+      <div><b>Hackmageddon</b><span>Ручная разметка, только помесячно</span><span class="r no">Нет</span></div>
+      <div><b>Вендоры ИБ</b><span>Кварталы, несопоставимые методики</span><span class="r no">Нет</span></div>
+      <div><b>Провайдеры LLM</b><span>Телеметрия закрыта, отчёты берём как события</span><span class="r no">Нет</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Чем лучше</h2>
+    <div class="list two">
+      <div><b>Контрфакт</b><span>Плацебо: 500 случайных сдвигов календаря</span></div>
+      <div><b>Атака ≠ пост</b><span>Растут посты, а не атаки: эффект публикации отделён</span></div>
+      <div><b>Контроль</b><span>Всплески объяснены MOVEit, Cleo и ликвидациями групп</span></div>
+      <div><b>Открытость</b><span>Код и данные открыты, пересчёт одной командой</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Роли</h2>
+    <div class="list two">
+      <div><b>Чернов Степан</b><span>Сбор данных, модель, плацебо и ITS</span></div>
+      <div><b>Левковская Эмилия</b><span>Недельный датасет, структура атак, графики, дашборд</span></div>
+      <div><b>Сергеев Артём</b><span>Календари релизов и событий, аналоги, документация</span></div>
+      <div><b>Малинин Дмитрий</b><span>Проверка источников, вычитка материалов</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Итог</h2>
+    <div class="pair">
+      <div><span class="cap">Получилось</span>
         <ul>
-          <li><b>Контрфакт.</b> Каждую оценку проверяем плацебо: 500 случайных сдвигов календаря релизов вместо сравнения «до/после»</li>
-          <li><b>Публикация ≠ атака.</b> Всплеск постов после релиза (+13&nbsp;%) есть, а по дате атаки эффекта нет. Так закрываем ошибку прошлого проекта</li>
-          <li><b>Контрольные события.</b> Учитываем MOVEit, Cleo, ликвидации групп и выборы: крупнейшие всплески (+52–60&nbsp;%) объясняются ими</li>
-          <li><b>Открытость.</b> Код, датасет и календари открыты, всё пересчитывается одной командой make all</li>
+          <li>Пайплайн воспроизводится целиком</li>
+          <li>Проверены все гипотезы H0–H4</li>
+          <li>Сверх плана: разрезы и дашборд</li>
         </ul>
       </div>
-      <div>
-        <h2>Получилось / нет</h2>
+      <div><span class="cap">Не получилось</span>
         <ul>
-          <li>Пайплайн от сырых данных до графиков, проверены H0–H4</li>
-          <li>Сверх минимума: регионы, отрасли, плацебо, дашборд</li>
-          <li>PostgreSQL не подняли: для 32 тысяч строк хватает CSV</li>
-          <li>Регионы до 2024 года непригодны: у 80&nbsp;% записей нет страны</li>
-          <li>Hackmageddon закрыт, ransomwatch не обновляется с весны 2025 года</li>
-          <li>Контрольные события 2026 года ещё не размечены</li>
+          <li>PostgreSQL: хватило CSV</li>
+          <li>Регионы до 2024 года: нет стран</li>
+          <li>События 2026 года не размечены</li>
         </ul>
       </div>
     </div>
+  </div>
 
-    <h2>Ревью по ролям</h2>
-    <table class="roles">
-      <tbody>
-        <tr><td>Чернов Степан<span>капитан; сбор данных, статистика</span></td><td>Сборщики пяти источников, очистка данных, модель (GLM с лагами, плацебо, ITS), тесты на синтетике</td></tr>
-        <tr><td>Левковская Эмилия<span>анализ данных, визуализация</span></td><td>Недельный датасет (270 недель, 34 ряда), сдвиги структуры по отраслям и регионам, графики, дашборд</td></tr>
-        <tr><td>Сергеев Артём<span>ИИ-инструменты атак, документация</span></td><td>Календари: 48 релизов, 16 событий наступательного ИИ, 12 контрольных событий; анализ аналогов, README</td></tr>
-      </tbody>
-    </table>
-
-    <div class="mvp"><b>MVP: ДА</b><div>Закрыты все 5 пунктов минимума: недельный датасет, хронология релизов, проверка H1–H2, вывод и методика. Связь «релиз → рост атак» не подтверждается (+5,4 %, плацебо p = 0,20).</div></div>
+  <div class="row mvp">
+    <h2>MVP: да</h2>
+    <p>Все пять пунктов минимума закрыты: недельный датасет, хронология релизов, проверка H1–H2, вывод и методика. Связь «релиз → рост атак» не подтвердилась: +5,4&nbsp;%, плацебо p&nbsp;=&nbsp;0,20.</p>
   </div>
   <div class="strip"></div>
 </section>
