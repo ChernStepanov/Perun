@@ -2,54 +2,47 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Око Перуна · Спринт 3</title>
+<title>ChernovSA · Спринт 3</title>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Golos+Text:wght@400;700&display=swap" rel="stylesheet">
 <style>
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-:root { --x: 14mm; --label: 42mm; --gap: 6mm; --ink: #111; --mute: #707070; --hair: #c4c2bb; }
-body { font-family: "Golos Text", sans-serif; color: var(--ink); font-size: 9pt; line-height: 1.4; }
+:root { --x: 13mm; --label: 30mm; --gap: 6mm; --ink: #111; --mute: #707070; --hair: #c4c2bb; }
+body { font-family: "Golos Text", sans-serif; color: var(--ink); font-size: 8.4pt; line-height: 1.36; }
 .page { width: 210mm; height: 297mm; background: #f6f5f1; position: relative; overflow: hidden;
         display: flex; flex-direction: column; }
 
-.head { flex: none; height: 14mm; padding: 0 var(--x); display: grid; grid-template-columns: 1fr auto 1fr;
+.head { flex: none; height: 12mm; padding: 0 var(--x); display: grid; grid-template-columns: 1fr auto 1fr;
         align-items: center; border-bottom: 0.4mm solid var(--ink); }
-.cap { font-weight: 700; font-size: 6.3pt; letter-spacing: .14em; text-transform: uppercase; }
-.head .date { font-size: 12pt; }
+.cap { font-weight: 700; font-size: 6pt; letter-spacing: .14em; text-transform: uppercase; }
+.head .date { font-size: 11pt; }
 .head .cap:last-child { justify-self: end; }
 
 .row { display: grid; grid-template-columns: var(--label) 1fr; column-gap: var(--gap);
-       padding: 4.5mm var(--x); border-bottom: 0.25mm solid var(--ink); }
+       padding: 3.8mm var(--x); border-bottom: 0.25mm solid var(--ink); }
 h1, h2 { font-family: "Oswald", sans-serif; font-weight: 700; text-transform: uppercase; line-height: .95; }
-h1 { font-size: 40pt; }
-h2 { font-size: 13pt; padding-top: .4mm; }
+h1 { font-size: 30pt; }
+h2 { font-size: 11.5pt; padding-top: .3mm; }
 
-.title { padding-top: 6mm; padding-bottom: 5mm; row-gap: 2mm; }
-.title h1 { grid-column: 1 / -1; }
-.title .sub { grid-column: 2; }
-.title .sub { font-size: 10.5pt; line-height: 1.35; }
-.title .sub span { display: block; color: var(--mute); font-size: 8.5pt; margin-top: 1.5mm; }
+.title { padding-top: 5mm; padding-bottom: 4mm; align-items: end; grid-template-columns: auto 1fr; column-gap: 8mm; }
+.title .sub { font-size: 9.5pt; }
+.title .sub span { display: block; color: var(--mute); font-size: 7.8pt; margin-top: 1mm; }
 
-.list > div { display: grid; grid-template-columns: 34mm 1fr 16mm; column-gap: 4mm; padding: 1.1mm 0;
+.list > div { display: grid; grid-template-columns: 34mm 1fr; column-gap: 4mm; padding: .85mm 0;
               border-top: 0.2mm solid var(--hair); }
 .list > div:first-child { border-top: 0; padding-top: 0; }
 .list b { font-weight: 700; }
-.list .r { text-align: right; font-weight: 700; font-size: 6.3pt; letter-spacing: .1em; text-transform: uppercase; padding-top: .5mm; }
-.list .r.no { color: var(--mute); }
-.list.two > div { grid-template-columns: 34mm 1fr; }
+.list.wide > div { grid-template-columns: 68mm 1fr; }
+.list.tri > div { grid-template-columns: 27mm 52mm 1fr; }
+.list .st { font-weight: 700; }
+.list .st.no { color: var(--mute); }
+.list .head2 { font-weight: 700; font-size: 6pt; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
 
-.pair { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gap); }
-.pair .cap { display: block; margin-bottom: 1.5mm; }
-ul { list-style: none; }
-li { padding-left: 4mm; text-indent: -4mm; margin-bottom: .9mm; }
-li::before { content: "> "; }
-
-.mvp { flex: 1; background: #000; color: #f4f3ee; border-bottom: 0; align-content: start;
-       background: #000 url(img/eye_one.jpg) right var(--x) bottom 8mm / 40mm no-repeat; }
-.mvp h2 { font-size: 26pt; }
-.mvp { min-height: 34mm; }
-.mvp p { max-width: 96mm; font-size: 9.5pt; }
-.strip { flex: none; height: 9mm; background: #000 url(img/strip.jpg) center/cover; border-top: 0.25mm solid #333; }
+.mvp { flex: 1; background: #000 url(img/eye_one.jpg) right var(--x) center / auto 70% no-repeat;
+       color: #f4f3ee; border-bottom: 0; align-content: center; }
+.mvp h2 { font-size: 20pt; }
+.mvp p { max-width: 104mm; }
+.strip { flex: none; height: 8mm; background: #000 url(img/strip.jpg) center/cover; border-top: 0.25mm solid #333; }
 </style>
 </head>
 <body>
@@ -57,39 +50,41 @@ li::before { content: "> "; }
   <div class="head"><span class="cap">Спринт 3 · 09.11 — 22.11</span><span class="date">20.11.26</span><span class="cap">Око Перуна</span></div>
 
   <div class="row title">
-    <h1>Спринт 3</h1>
-    <div class="sub">Аналоги, киллер-фичи, ревью
-      <span>Влияние релизов LLM на динамику кибератак · github.com/ChernStepanov/Perun</span></div>
+    <h1>Спринт&nbsp;3</h1>
+    <div class="sub">Анализ аналогов и ревью работы
+      <span>Влияние релизов LLM на динамику кибератак · капитан Чернов С. А. · github.com/ChernStepanov/Perun</span></div>
   </div>
 
   <div class="row">
     <h2>Аналоги</h2>
-    <div class="list">
-      <div><b>ransomware.live</b><span>Хранит дату атаки отдельно от даты поста</span><span class="r">Берём</span></div>
-      <div><b>ransomwatch</b><span>Собирает те же сайты, по нему сверяемся</span><span class="r">Берём</span></div>
-      <div><b>CISA KEV</b><span>Уязвимости, которые реально эксплуатируют</span><span class="r">Берём</span></div>
-      <div><b>Epoch AI</b><span>Даты выхода моделей и открыты ли веса</span><span class="r">Берём</span></div>
-      <div><b>AI Incident DB</b><span>У каждой записи указан источник</span><span class="r">Берём</span></div>
-      <div><b>Hackmageddon</b><span>Размечен вручную и только по месяцам</span><span class="r no">Нет</span></div>
-      <div><b>Вендоры ИБ</b><span>Цифры по кварталам, у каждого своя методика</span><span class="r no">Нет</span></div>
-      <div><b>Провайдеры LLM</b><span>Данных нет, их отчёты ставим в календарь</span><span class="r no">Нет</span></div>
+    <div class="list tri">
+      <div><span class="head2">Аналог</span><span class="head2">Киллер-фича</span><span class="head2">Решение</span></div>
+      <div><b>ransomware.live</b><span>Дата атаки отдельно от даты публикации</span><span><span class="st">Внедрили.</span> Считаем по обеим датам</span></div>
+      <div><b>ransomwatch</b><span>Независимый сбор тех же сайтов</span><span><span class="st">Внедрили.</span> Сверка, корреляция 0,60</span></div>
+      <div><b>CISA KEV</b><span>Пометка о шифровальщиках</span><span><span class="st">Внедрили.</span> Отдельный ряд по CVE</span></div>
+      <div><b>Epoch AI</b><span>Открыты ли веса модели</span><span><span class="st">Внедрили.</span> Делим релизы на два типа</span></div>
+      <div><b>AI Incident DB</b><span>Источник у каждой записи</span><span><span class="st">Внедрили.</span> Ссылки у всех 76 событий</span></div>
+      <div><b>ransomware.live</b><span>Дашборд по группам и странам</span><span><span class="st">Внедрили.</span> Дашборд по всем рядам</span></div>
+      <div><b>Hackmageddon</b><span>Ручная разметка мотива и техники</span><span><span class="st no">Отклонили.</span> 32 тыс. записей вручную не разметить</span></div>
+      <div><b>Вендоры ИБ</b><span>Большая телеметрия, есть Россия</span><span><span class="st no">Отклонили.</span> Только кварталы, разные методики</span></div>
+      <div><b>Провайдеры LLM</b><span>Данные о злоупотреблениях моделями</span><span><span class="st no">Отклонили.</span> Данные закрыты, отчёты берём как события</span></div>
     </div>
   </div>
 
   <div class="row">
-    <h2>Чем лучше</h2>
-    <div class="list two">
-      <div><b>Плацебо</b><span>Каждую оценку сравниваем с 500 случайными сдвигами дат</span></div>
-      <div><b>Дата атаки</b><span>Считаем и по дате атаки, а не только поста</span></div>
-      <div><b>Контроль</b><span>В модели учтены MOVEit, Cleo и ликвидации групп</span></div>
+    <h2>Наши преимущества</h2>
+    <div class="list">
+      <div><b>Плацебо</b><span>Каждую оценку сравниваем с 500 случайными сдвигами дат релизов</span></div>
+      <div><b>Дата атаки</b><span>Не путаем рост публикаций с ростом атак</span></div>
+      <div><b>Контроль</b><span>В модели учтены MOVEit, Cleo, ликвидации групп и выборы</span></div>
       <div><b>Открытость</b><span>Код и данные в репозитории, всё считается одной командой</span></div>
     </div>
   </div>
 
   <div class="row">
     <h2>Роли</h2>
-    <div class="list two">
-      <div><b>Чернов Степан</b><span>Сбор данных, модель, плацебо и ITS</span></div>
+    <div class="list">
+      <div><b>Чернов Степан</b><span>Капитан. Сбор данных, модель, плацебо и ITS</span></div>
       <div><b>Левковская Эмилия</b><span>Недельный датасет, структура атак, графики, дашборд</span></div>
       <div><b>Сергеев Артём</b><span>Календари релизов и событий, аналоги, документация</span></div>
       <div><b>Малинин Дмитрий</b><span>Проверка источников, вычитка текстов</span></div>
@@ -97,28 +92,28 @@ li::before { content: "> "; }
   </div>
 
   <div class="row">
-    <h2>Итог</h2>
-    <div class="pair">
-      <div><span class="cap">Получилось</span>
-        <ul>
-          <li>Расчёт воспроизводится целиком</li>
-          <li>Проверили все гипотезы, H0–H4</li>
-          <li>Успели регионы, отрасли и дашборд</li>
-        </ul>
-      </div>
-      <div><span class="cap">Не получилось</span>
-        <ul>
-          <li>PostgreSQL не подняли, хватает CSV</li>
-          <li>Страны известны только с 2024</li>
-          <li>События 2026 года ещё не размечены</li>
-        </ul>
-      </div>
+    <h2>Трудности</h2>
+    <div class="list wide">
+      <div><b>Публикация отстаёт от атаки на дни и недели</b><span>Завели отдельный ряд по дате атаки</span></div>
+      <div><b>Релизы выходят почти каждую неделю</b><span>Плацебо сдвигает календарь целиком</span></div>
+      <div><b>У записей 2021–2022 годов нет страны</b><span>Регионы считаем с 2024 года</span></div>
+      <div><b>Hackmageddon не отдаёт данные скриптам</b><span>Заменили на ransomwatch и KEV</span></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Результаты</h2>
+    <div class="list">
+      <div><b>Данные</b><span>270 недель, 31 994 жертвы, 48 релизов, 900 CVE</span></div>
+      <div><b>H1, H2</b><span>После релизов атак не больше: +5,4 %, при случайных датах так же</span></div>
+      <div><b>H3, H4</b><span>Открытые модели не опаснее, эксплуатируют не быстрее</span></div>
+      <div><b>H0</b><span>Крупные всплески дают MOVEit (+52 %) и Cleo (+60 %)</span></div>
     </div>
   </div>
 
   <div class="row mvp">
-    <h2>MVP: да</h2>
-    <p>Минимум из плана сделан целиком: недельный датасет, хронология релизов, проверка H1 и H2, вывод и описание методики. Связи между релизами и ростом атак мы не нашли. За 13 недель после релиза атак на 5,4&nbsp;% больше обычного, но при случайных датах так выходит в каждом пятом случае.</p>
+    <h2>MVP готов</h2>
+    <p>Сделан весь минимум из плана: недельный датасет, хронология релизов, проверка H1 и H2, вывод и описание методики. Дополнительно успели регионы, отрасли, H0, H3, H4 и дашборд.</p>
   </div>
   <div class="strip"></div>
 </section>
