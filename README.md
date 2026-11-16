@@ -168,4 +168,4 @@ make test
 
 ## Спринт 3
 
-[Аналоги](reports/sprint3/analogs.md), [ревью](reports/sprint3/review.md), [PDF для сдачи](reports/sprint3/ChernovSA.pdf).
+[Аналоги](reports/sprint3/analogs.md), [ревью](reports/sprint3/review.md).
