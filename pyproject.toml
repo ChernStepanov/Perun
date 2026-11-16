@@ -1,0 +1,24 @@
+[project]
+name = "perun"
+version = "0.3.0"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.9",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "patsy>=0.5",
+    "plotly>=5.20",
+    "ruptures>=1.1",
+    "scipy>=1.12",
+    "statsmodels>=0.14",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["perun", "perun.sources"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
