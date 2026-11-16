@@ -1,0 +1,13 @@
+sector,pre,post,share_pre,share_post,delta_pp
+Manufacturing,620,4983,22.238,18.592,-3.646
+Retail & E-Commerce,299,1962,10.725,7.320,-3.404
+Government & Defense,145,1141,5.201,4.257,-0.944
+Agriculture and Food Production,134,1162,4.806,4.335,-0.471
+Education,143,1259,5.129,4.697,-0.432
+Energy & Utilities,90,871,3.228,3.250,0.022
+Hospitality,71,780,2.547,2.910,0.364
+Financial Services,156,1648,5.595,6.149,0.553
+Transportation,113,1334,4.053,4.977,0.924
+Healthcare,206,2516,7.389,9.387,1.999
+Professional Services,509,5468,18.257,20.401,2.145
+Technology,302,3678,10.832,13.723,2.891

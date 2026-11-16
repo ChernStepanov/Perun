@@ -1,0 +1,9 @@
+outcome,events,post_pct,p_placebo
+kev_fresh,releases,11.7021,0.0758
+kev_fresh,offensive_ai,-7.4706,0.4651
+kev_ransomware,releases,28.4237,0.0838
+kev_ransomware,offensive_ai,17.5534,0.5289
+exploits,releases,38.8216,0.2136
+exploits,offensive_ai,20.6555,0.7345
+exploits_cve,releases,43.9997,0.1218
+exploits_cve,offensive_ai,10.9173,0.8503

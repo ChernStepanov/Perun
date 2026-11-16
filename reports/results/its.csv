@@ -1,0 +1,6 @@
+break,series,level_pct,level_p,slope_pct_year,slope_p,level_pct_groups_ctrl,level_p_groups_ctrl
+ChatGPT,victims,64.1201,0.0000,71.8084,0.0000,22.3870,0.0993
+ChatGPT,ransomwatch,57.9649,0.0002,44.0579,0.0029,43.3057,0.0000
+LLaMA leak,victims,46.7274,0.0377,33.8365,0.0817,0.6799,0.9735
+LLaMA leak,ransomwatch,76.8934,0.0000,12.6555,0.3006,43.9862,0.0012
+DeepSeek-R1,victims,-6.8863,0.5058,2.7448,0.7085,13.8675,0.0872
