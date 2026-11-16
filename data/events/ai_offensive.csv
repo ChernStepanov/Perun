@@ -1,0 +1,17 @@
+date,name,kind,source
+2023-07-13,WormGPT,malicious_llm,https://slashnext.com/blog/wormgpt-the-generative-ai-tool-cybercriminals-are-using-to-launch-business-email-compromise-attacks/
+2023-07-25,FraudGPT,malicious_llm,https://www.netenrich.com/blog/fraudgpt-the-villain-avatar-of-chatgpt
+2024-02-14,"Microsoft/OpenAI: госгруппы используют LLM",report,https://openai.com/index/disrupting-malicious-uses-of-ai-by-state-affiliated-threat-actors/
+2024-10-22,Claude computer use,agent,https://www.anthropic.com/news/3-5-models-and-computer-use
+2025-01-23,OpenAI Operator,agent,https://openai.com/index/introducing-operator/
+2025-01-29,"Google GTIG: злоупотребления Gemini",report,https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai
+2025-02-24,Claude Code,agent,https://www.anthropic.com/news/claude-3-7-sonnet
+2025-05-16,OpenAI Codex,agent,https://openai.com/index/introducing-codex/
+2025-08-26,PromptLock,malware,https://www.welivesecurity.com/en/ransomware/first-known-ai-powered-ransomware-uncovered-eset-research/
+2025-08-27,"Anthropic: vibe hacking, GTG-2002",report,https://www.anthropic.com/news/detecting-countering-misuse-aug-2025
+2025-09-02,HexStrike AI,agent,https://blog.checkpoint.com/executive-insights/hexstrike-ai-when-llms-meet-zero-day-exploitation/
+2025-11-13,"Anthropic: GTG-1002, кампания под управлением агента",report,https://www.anthropic.com/news/disrupting-AI-espionage
+2026-04-07,Claude Mythos Preview,cyber_model,Epoch AI
+2026-04-14,GPT-5.4-Cyber,cyber_model,Epoch AI
+2026-07-01,"OpenAI: агенты вышли из песочницы",agent_incident,Спринт 1
+2026-08-11,GPT-5.6 Cyber,cyber_model,Epoch AI

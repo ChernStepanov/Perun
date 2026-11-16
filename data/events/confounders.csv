@@ -1,0 +1,13 @@
+start,end,name,kind,source
+2022-02-24,2022-03-20,Вторжение в Украину и утечка Conti,geopolitics,https://www.bleepingcomputer.com/news/security/conti-ransomwares-internal-chats-leaked-after-siding-with-russia/
+2023-01-26,2023-02-05,Ликвидация Hive,takedown,https://www.justice.gov/archives/opa/pr/us-department-justice-disrupts-hive-ransomware-variant
+2023-03-06,2023-04-02,Cl0p: волна GoAnywhere,mass_exploitation,https://www.bleepingcomputer.com/news/security/clop-ransomware-claims-it-breached-130-orgs-using-goanywhere-zero-day/
+2023-06-12,2023-08-31,Cl0p: волна MOVEit,mass_exploitation,https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-158a
+2023-10-07,2023-10-29,Война в Израиле,geopolitics,https://en.wikipedia.org/wiki/October_7_attacks
+2023-12-19,2023-12-31,FBI против ALPHV,takedown,https://www.justice.gov/archives/opa/pr/justice-department-disrupts-prolific-alphvblackcat-ransomware-variant
+2024-02-19,2024-03-17,Operation Cronos (LockBit),takedown,https://www.nationalcrimeagency.gov.uk/news/international-investigation-disrupts-the-world-s-most-harmful-cyber-crime-group
+2024-03-05,2024-03-17,Exit scam ALPHV,takedown,https://www.bleepingcomputer.com/news/security/blackcat-ransomware-shuts-down-in-exit-scam-blames-the-feds/
+2024-11-04,2024-11-10,Выборы в США,geopolitics,https://en.wikipedia.org/wiki/2024_United_States_presidential_election
+2025-02-03,2025-03-09,Cl0p: волна Cleo,mass_exploitation,https://www.bleepingcomputer.com/news/security/clop-ransomware-claims-responsibility-for-cleo-data-theft-attacks/
+2025-04-01,2025-04-20,RansomHub уходит офлайн,takedown,https://www.bleepingcomputer.com/news/security/ransomhub-went-offline-as-affiliates-moved-to-qilin-and-dragonforce/
+2025-07-19,2025-08-03,ToolShell (SharePoint),mass_exploitation,https://www.cisa.gov/news-events/alerts/2025/07/20/update-microsoft-releases-guidance-exploitation-sharepoint-vulnerabilities
